@@ -1,0 +1,278 @@
+<!-- Journey & Bloom – Travel Planner Journal Set – Shopify Custom HTML Block -->
+<!-- Vlož do: Shopify Admin → Pages / nebo Online Store → Themes → Custom content -->
+
+<style>
+  .jb-product-section {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .jb-product-section * {
+    box-sizing: border-box;
+  }
+
+  /* HERO BADGE */
+  .jb-badge {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #B8965A;
+    border: 1px solid #D4AF7A;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  /* HEADING */
+  .jb-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #1C1A18;
+    margin: 0 0 8px 0;
+  }
+
+  .jb-subtitle {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #7A7570;
+    margin: 0 0 20px 0;
+  }
+
+  /* DESCRIPTION */
+  .jb-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #3D3A35;
+    margin: 0 0 28px 0;
+  }
+
+  /* DIVIDER */
+  .jb-divider {
+    border: none;
+    border-top: 1px solid #EDE5D8;
+    margin: 0 0 24px 0;
+  }
+
+  /* WHAT'S INCLUDED */
+  .jb-section-label {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #B8965A;
+    margin: 0 0 14px 0;
+  }
+
+  .jb-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  @media (max-width: 480px) {
+    .jb-features {
+      grid-template-columns: 1fr;
+    }
+    .jb-title {
+      font-size: 24px;
+    }
+  }
+
+  .jb-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #3D3A35;
+  }
+
+  .jb-features li::before {
+    content: '✓';
+    color: #B8965A;
+    font-weight: 700;
+    font-size: 12px;
+    margin-top: 1px;
+    flex-shrink: 0;
+  }
+
+  /* INFO BAR */
+  .jb-info-bar {
+    background: #F0E4CC;
+    border: 1px solid #D4AF7A;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .jb-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .jb-info-item-label {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #7A7570;
+  }
+
+  .jb-info-item-value {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 15px;
+    color: #1C1A18;
+    font-weight: 400;
+  }
+
+  .jb-info-item-value strong {
+    color: #B8965A;
+  }
+
+  /* QUOTE */
+  .jb-quote {
+    background: linear-gradient(160deg, #F5EFE6 0%, #EDE5D8 100%);
+    border-left: 3px solid #B8965A;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+  }
+
+  .jb-quote p {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.6;
+    color: #3D3A35;
+    margin: 0 0 6px 0;
+  }
+
+  .jb-quote cite {
+    font-size: 11px;
+    color: #7A7570;
+    letter-spacing: 0.06em;
+  }
+
+  /* CTA */
+  .jb-cta-wrap {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .jb-btn-primary {
+    display: inline-block;
+    background: #1C1A18;
+    color: #F5EFE6;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+
+  .jb-btn-primary:hover {
+    background: #3D3A35;
+    color: #F5EFE6;
+    text-decoration: none;
+  }
+
+  .jb-btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: #B8965A;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 14px 24px;
+    border: 1px solid #D4AF7A;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+
+  .jb-btn-secondary:hover {
+    background: #F0E4CC;
+    color: #B8965A;
+    text-decoration: none;
+  }
+</style>
+
+<div class="jb-product-section">
+
+  <div class="jb-badge">New Arrival</div>
+
+  <h2 class="jb-title">The Travel Planner Journal Set</h2>
+  <p class="jb-subtitle">Your complete companion for mindful travel</p>
+
+  <p class="jb-desc">
+    A beautifully crafted set designed to help you plan, experience, and deeply reflect on every journey.
+    Whether you're dreaming of your next destination or already on the road, this set keeps you organised,
+    intentional, and present — turning every trip into a meaningful chapter of your story.
+  </p>
+
+  <hr class="jb-divider">
+
+  <p class="jb-section-label">What's included</p>
+  <ul class="jb-features">
+    <li>Travel vision &amp; intention setting</li>
+    <li>Destination bucket list pages</li>
+    <li>Day-by-day itinerary planner</li>
+    <li>Mindful budget &amp; spending tracker</li>
+    <li>Packing &amp; document checklists</li>
+    <li>Daily highlights &amp; reflection journal</li>
+    <li>Inner reflection &amp; gratitude prompts</li>
+    <li>Creative space for photos &amp; sketches</li>
+    <li>Next dreams &amp; future destinations</li>
+    <li>Premium thick paper, lay-flat binding</li>
+  </ul>
+
+  <div class="jb-info-bar">
+    <div class="jb-info-item">
+      <span class="jb-info-item-label">Delivery</span>
+      <span class="jb-info-item-value"><strong>3–8 days</strong></span>
+    </div>
+    <div class="jb-info-item">
+      <span class="jb-info-item-label">Format</span>
+      <span class="jb-info-item-value">A5 Hardcover</span>
+    </div>
+    <div class="jb-info-item">
+      <span class="jb-info-item-label">Price</span>
+      <span class="jb-info-item-value">from <strong>£25</strong></span>
+    </div>
+    <div class="jb-info-item">
+      <span class="jb-info-item-label">Journeys</span>
+      <span class="jb-info-item-value">Up to 30 trips</span>
+    </div>
+  </div>
+
+  <div class="jb-quote">
+    <p>"This journal is beyond stunning. The cover is even prettier in person, and the pages feel premium — well-structured, inspiring, and perfectly combines travelling with personal growth."</p>
+    <cite>— Verified customer</cite>
+  </div>
+
+  <div class="jb-cta-wrap">
+    <a class="jb-btn-primary" href="https://thejourneyandbloom.com/products/the-travel-planner-journal-set" target="_blank" rel="noopener">
+      Shop the Set
+    </a>
+    <a class="jb-btn-secondary" href="https://thejourneyandbloom.com/collections/travel-planners" target="_blank" rel="noopener">
+      View All Planners
+    </a>
+  </div>
+
+</div>
