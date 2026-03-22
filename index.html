@@ -99,23 +99,12 @@ html,body{height:100%;background:var(--cream);font-family:'Jost',sans-serif;colo
 .quiz-sub{font-size:11px;color:var(--sand);opacity:.8}
 .quiz-arrow{font-size:22px;color:var(--gold-light);flex-shrink:0}
 
-/* PLANNER PRODUCT CARD */
-.product-card{background:linear-gradient(160deg,var(--gold-pale) 0%,var(--cream-dark) 100%);border-radius:var(--radius);border:1px solid var(--gold-light);overflow:hidden}
-.product-card-header{padding:16px 18px 12px;border-bottom:1px solid var(--gold-light)}
-.product-card-label{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-.product-card-title{font-family:’Cormorant Garamond’,serif;font-size:20px;font-weight:400;line-height:1.2;color:var(--ink)}
-.product-card-subtitle{font-family:’Cormorant Garamond’,serif;font-size:13px;font-style:italic;color:var(--ink-muted);margin-top:4px}
-.product-card-body{padding:14px 18px}
-.product-card-desc{font-size:12px;line-height:1.6;color:var(--ink-soft);margin-bottom:12px}
-.product-features{list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
-.product-features li{font-size:11px;color:var(--ink-soft);display:flex;align-items:flex-start;gap:8px;line-height:1.4}
-.product-features li::before{content:’✓’;display:inline-block;min-width:14px;color:var(--gold);font-weight:700;font-size:10px;margin-top:1px}
-.product-card-meta{display:flex;align-items:center;justify-content:space-between;padding:10px 18px;background:rgba(28,26,24,.04);border-top:1px solid var(--gold-light)}
-.product-card-delivery{font-size:10px;color:var(--ink-muted);display:flex;align-items:center;gap:4px}
-.product-card-delivery strong{color:var(--ink-soft);font-weight:600}
-.product-card-price{font-family:’Cormorant Garamond’,serif;font-size:16px;color:var(--gold)}
-.product-card-cta{display:block;text-align:center;background:var(--ink);color:var(--cream);font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:12px 18px;transition:background .2s}
-.product-card-cta:active{background:var(--ink-soft)}
+/* PLANNER BANNER */
+.companion-banner{background:linear-gradient(135deg,var(--gold-pale),var(--cream-dark));border-radius:var(--radius);padding:18px 20px;border:1px solid var(--gold-light);cursor:pointer;transition:transform .15s}
+.companion-banner:active{transform:scale(.99)}
+.companion-banner-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.companion-banner-text{font-family:‘Cormorant Garamond’,serif;font-size:16px;line-height:1.4;color:var(--ink-soft)}
+.companion-banner-link{font-size:11px;color:var(--gold);margin-top:6px;letter-spacing:.06em}
 
 /* BUDGET */
 .budget-summary{margin:20px 20px 0;background:var(--ink);border-radius:var(--radius);padding:24px;color:var(--cream)}
@@ -369,30 +358,10 @@ html,body{height:100%;background:var(--cream);font-family:'Jost',sans-serif;colo
         </div>
         <div class="quiz-arrow">›</div>
       </a>
-      <div class="product-card">
-        <div class="product-card-header">
-          <div class="product-card-label">Journey &amp; Bloom</div>
-          <div class="product-card-title">The Travel Planner Journal Set</div>
-          <div class="product-card-subtitle">Your complete companion for mindful travel</div>
-        </div>
-        <div class="product-card-body">
-          <p class="product-card-desc">A beautifully crafted set designed to help you plan, experience, and reflect on every journey — from bucket lists and itineraries to daily memories and personal growth.</p>
-          <ul class="product-features">
-            <li>Travel vision &amp; intention setting</li>
-            <li>Destination bucket list pages</li>
-            <li>Day-by-day trip itinerary planner</li>
-            <li>Mindful budget &amp; spending tracker</li>
-            <li>Packing &amp; document checklists</li>
-            <li>Daily highlights &amp; reflection journal</li>
-            <li>Creative space for photos &amp; sketches</li>
-            <li>Premium thick paper, lay-flat binding</li>
-          </ul>
-        </div>
-        <div class="product-card-meta">
-          <div class="product-card-delivery">📦 Delivery: <strong>3–8 days</strong></div>
-          <div class="product-card-price">from £25</div>
-        </div>
-        <a class="product-card-cta" href="https://thejourneyandbloom.com/products/the-travel-planner-journal-set" target="_blank" rel="noopener">Shop the Set →</a>
+      <div class="companion-banner" onclick="window.open('https://thejourneyandbloom.com/collections/travel-planners','_blank')">
+        <div class="companion-banner-label">Journey &amp; Bloom</div>
+        <div class="companion-banner-text">Pair this app with the physical Travel Planner for the complete mindful travel experience.</div>
+        <div class="companion-banner-link">Shop the Planner — from £25 →</div>
       </div>
     </div>
   </div>
