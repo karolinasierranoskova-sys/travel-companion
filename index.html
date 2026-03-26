@@ -730,7 +730,7 @@ function saveBudget(){save();showToast('Budget saved ✓');}
 function resetBudget(){const trip=getActiveTrip();if(!trip)return;Object.keys(state.budget[trip.id]).forEach(cat=>{state.budget[trip.id][cat]={planned:'',actual:''};});save();refreshBudget();showToast('Budget reset');}
 
 function addDoc(){document.getElementById('docFileInput').click();}
-function handleDocPhoto(input){const file=input.files[0];if(!file)return;const reader=new FileReader();reader.onload=(e)=>{const tripId=state.activeTrip;if(!tripId){showToast('Add a trip first');return;}if(!state.docs[tripId])state.docs[tripId]=[];const name=prompt('Document name:')||'Document';state.docs[tripId].push({id:Date.now().toString(),name,img:e.target.result});save();refreshDocs();showToast('Document saved ✓');};reader.readAsDataURL(file);input.value='';}
+function handleDocPhoto(input){const file=input.files[0];if(!file)return;const reader=new FileReader();reader.onload=(e)=>{const tripId=state.activeTrip;if(!tripId){showToast('Add a trip first');return;}if(!state.docs[tripId])state.docs[tripId]=[];const name=prompt('Document name:')||'Document';state.docs[tripId].push({id:Date.now().toString(),name,img:e.target.result});save();refreshDocs();refreshTripDetail();showToast('Document saved ✓');};reader.readAsDataURL(file);input.value='';}
 function deleteDoc(tripId,docId){if(!state.docs?.[tripId])return;state.docs[tripId]=state.docs[tripId].filter(d=>d.id!==docId);save();refreshDocs();}
 function refreshDocs(){const trip=getActiveTrip();const el=document.getElementById('docsList');if(!trip){el.innerHTML='<div style="text-align:center;padding:48px 20px;font-family:Cormorant Garamond,serif;font-size:18px;font-style:italic;color:var(--ink-muted)">Add a trip first.</div>';return;}const docs=state.docs?.[trip.id]||[];if(!docs.length){el.innerHTML='<div style="text-align:center;padding:32px 20px;font-family:Cormorant Garamond,serif;font-size:18px;font-style:italic;color:var(--ink-muted)">No documents yet.<br><br>Add photos of tickets, hotel &amp; insurance.</div>';return;}el.innerHTML=docs.map(doc=>`<div class="doc-card"><div class="doc-card-header"><span class="doc-card-icon">📄</span><div class="doc-card-info"><div class="doc-card-name">${doc.name}</div></div><button onclick="deleteDoc('${trip.id}','${doc.id}')" style="background:none;border:none;color:var(--ink-muted);cursor:pointer;font-size:18px;padding:4px;">🗑</button></div><img class="doc-card-img" src="${doc.img}" alt="${doc.name}"></div>`).join('');}
 
@@ -805,7 +805,7 @@ function refreshTripDetail(){
     <div class="td-section">
       <div class="td-section-title">Documents</div>
       <div id="td-docs-list">${docsHtml}</div>
-      <button class="doc-add-btn" style="margin-top:10px" onclick="document.getElementById('docInput').click()"><span>📸</span> Add document</button>
+      <button class="doc-add-btn" style="margin-top:10px" onclick="addDoc()"><span>📸</span> Add document</button>
     </div>
     <div class="td-section">
       <div class="td-section-title">Notes</div>
