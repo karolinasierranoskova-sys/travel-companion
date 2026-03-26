@@ -800,7 +800,7 @@ function refreshTripDetail(){
     <div class="td-section">
       <div class="td-section-title">Budget</div>
       ${budgetRows||'<div style="font-family:Cormorant Garamond,serif;font-size:16px;font-style:italic;color:var(--ink-muted)">No budget set yet.</div>'}
-      ${tp>0?`<div style="margin-top:10px;padding-top:12px;border-top:1px solid var(--cream-dark);display:flex;justify-content:space-between;font-size:14px;font-weight:500;color:var(--ink)"><span>Total</span><span style="color:${over?'var(--red-soft)':'var(--ink)'}">${sym}${ta.toFixed(0)} / ${sym}${tp.toFixed(0)}</span></div><div style=\"margin-top:8px;text-align:center;padding:8px 12px;border-radius:8px;background:${over?'#fff0f0':'#f0f7f1'};font-size:13px;font-weight:500;color:${over?'var(--red-soft)':'var(--green-soft)'}\">${over?'⚠️ Over budget \u2212'+sym+(ta-tp).toFixed(0):'✓ '+sym+(tp-ta).toFixed(0)+' remaining'}</div>`:''}}
+      ${tp>0?`<div style="margin-top:10px;padding-top:12px;border-top:1px solid var(--cream-dark);display:flex;justify-content:space-between;font-size:14px;font-weight:500;color:var(--ink)"><span>Total</span><span style="color:${over?'var(--red-soft)':'var(--ink)'}">${sym}${ta.toFixed(0)} / ${sym}${tp.toFixed(0)}</span></div><div style=\"margin-top:8px;text-align:center;padding:8px 12px;border-radius:8px;background:${over?'#fff0f0':'#f0f7f1'};font-size:13px;font-weight:500;color:${over?'var(--red-soft)':'var(--green-soft)'}\">${over?'⚠️ Over budget \u2212'+sym+(ta-tp).toFixed(0):'✓ '+sym+(tp-ta).toFixed(0)+' remaining'}</div>`:''}
     </div>
     <div class="td-section">
       <div class="td-section-title">Documents</div>
